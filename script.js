@@ -20,11 +20,19 @@ window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
     
     if (currentScroll <= 0) {
-        navbar.style.boxShadow = 'none';
-    } else {
-        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+        navbar.classList.remove('scroll-up');
+        return;
     }
     
+    if (currentScroll > lastScroll && !navbar.classList.contains('scroll-down')) {
+        // Scroll Down
+        navbar.classList.remove('scroll-up');
+        navbar.classList.add('scroll-down');
+    } else if (currentScroll < lastScroll && navbar.classList.contains('scroll-down')) {
+        // Scroll Up
+        navbar.classList.remove('scroll-down');
+        navbar.classList.add('scroll-up');
+    }
     lastScroll = currentScroll;
 });
 
@@ -185,4 +193,70 @@ authFeaturesStyle.textContent = `
         color: #2563eb;
     }
 `;
-document.head.appendChild(authFeaturesStyle); 
+document.head.appendChild(authFeaturesStyle);
+
+// Mobile Menu Toggle
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const navCenter = document.querySelector('.nav-center');
+const navRight = document.querySelector('.nav-right');
+
+mobileMenuBtn.addEventListener('click', () => {
+    navCenter.classList.toggle('show');
+    navRight.classList.toggle('show');
+    mobileMenuBtn.setAttribute('aria-expanded', 
+        mobileMenuBtn.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
+    );
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-container') && 
+        (navCenter.classList.contains('show') || navRight.classList.contains('show'))) {
+        navCenter.classList.remove('show');
+        navRight.classList.remove('show');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    }
+});
+
+// Form validation and submission
+const newsletterForm = document.querySelector('.newsletter-form');
+if (newsletterForm) {
+    newsletterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const emailInput = newsletterForm.querySelector('input[type="email"]');
+        const email = emailInput.value.trim();
+        
+        if (email) {
+            // Here you would typically send the email to your server
+            // For now, we'll just show a success message
+            const successMessage = document.createElement('div');
+            successMessage.className = 'form-success';
+            successMessage.textContent = 'Thank you for subscribing!';
+            newsletterForm.appendChild(successMessage);
+            
+            // Clear the form
+            emailInput.value = '';
+            
+            // Remove success message after 3 seconds
+            setTimeout(() => {
+                successMessage.remove();
+            }, 3000);
+        }
+    });
+}
+
+// Add loading state to buttons
+document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('click', function() {
+        if (this.type === 'submit' || this.classList.contains('btn-apply')) {
+            this.classList.add('loading');
+            this.disabled = true;
+            
+            // Simulate loading state
+            setTimeout(() => {
+                this.classList.remove('loading');
+                this.disabled = false;
+            }, 2000);
+        }
+    });
+}); 

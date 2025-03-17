@@ -12,10 +12,10 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
-            <div class="logo">
-                <img src="assets/logo.png" alt="Logo" class="logo-img" width="40" height="40">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="OpportunityNet Logo" class="logo-img" width="40" height="40">
                 <div class="logo-text">OpportunityNet</div>
-            </div>
+            </a>
             <div class="nav-center">
                 <a href="index.html" class="nav-link active">Home</a>
                 <a href="scholarships.html" class="nav-link">Scholarships</a>
@@ -47,8 +47,11 @@
                 <div class="search-container">
                     <div class="search-box">
                         <i class="fas fa-search"></i>
-                        <input type="text" placeholder="Search scholarships by country, university, or field...">
-                        <button class="btn btn-primary btn-search">Search</button>
+                        <input type="text" placeholder="Search scholarships by country, university, or field..." aria-label="Search scholarships">
+                        <button class="btn btn-primary btn-search" aria-label="Search">
+                            <i class="fas fa-search"></i>
+                            Search
+                        </button>
                     </div>
                     <div class="popular-searches">
                         Popular: <a href="#">Full Scholarship</a> • <a href="#">Masters Degree</a> • <a href="#">PhD Positions</a>
@@ -56,21 +59,27 @@
                 </div>
                 <div class="grid stats-grid">
                     <div class="card stat-card">
-                        <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="stat-icon">
+                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                        </div>
                         <div class="stat-content">
                             <div class="stat-number">15,000+</div>
                             <div class="stat-label">Active Scholarships</div>
                         </div>
                     </div>
                     <div class="card stat-card">
-                        <div class="stat-icon"><i class="fas fa-globe"></i></div>
+                        <div class="stat-icon">
+                            <i class="fas fa-globe" aria-hidden="true"></i>
+                        </div>
                         <div class="stat-content">
                             <div class="stat-number">100+</div>
                             <div class="stat-label">Countries</div>
                         </div>
                     </div>
                     <div class="card stat-card">
-                        <div class="stat-icon"><i class="fas fa-users"></i></div>
+                        <div class="stat-icon">
+                            <i class="fas fa-users" aria-hidden="true"></i>
+                        </div>
                         <div class="stat-content">
                             <div class="stat-number">50,000+</div>
                             <div class="stat-label">Success Stories</div>
@@ -79,9 +88,11 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="assets/hero-image.jpg" alt="Students studying" width="800" height="600" loading="lazy">
+                <img src="assets/hero-image.jpg" alt="Students studying together" width="800" height="600" loading="lazy">
                 <div class="card floating-card">
-                    <div class="card-icon"><i class="fas fa-award"></i></div>
+                    <div class="card-icon">
+                        <i class="fas fa-award" aria-hidden="true"></i>
+                    </div>
                     <div class="card-content">
                         <h3>New Scholarship Alert</h3>
                         <p>Fulbright Scholarship 2025</p>
@@ -99,14 +110,17 @@
                     <h2>Featured Opportunities</h2>
                     <p>Exclusive scholarships with upcoming deadlines</p>
                 </div>
-                <a href="scholarships.html" class="btn btn-outline">View All <i class="fas fa-arrow-right"></i></a>
+                <a href="scholarships.html" class="btn btn-outline">
+                    View All
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
             </div>
             <div class="grid scholarship-grid">
                 <article class="scholarship-card">
                     <div class="card-tag">Featured</div>
                     <div class="card-header">
                         <img src="assets/scholarships/australia.jpg" 
-                             alt="Australia Awards" 
+                             alt="University of Melbourne campus" 
                              class="thumbnail"
                              width="400" 
                              height="200"
@@ -122,8 +136,8 @@
                     <div class="card-body">
                         <h3>Australia Awards Scholarships 2026</h3>
                         <div class="card-meta">
-                            <span><i class="fas fa-graduation-cap"></i> Masters, PhD</span>
-                            <span><i class="fas fa-wallet"></i> Full Funding</span>
+                            <span><i class="fas fa-graduation-cap" aria-hidden="true"></i> Masters, PhD</span>
+                            <span><i class="fas fa-wallet" aria-hidden="true"></i> Full Funding</span>
                         </div>
                         <p class="card-description">
                             Full scholarship covering tuition, living expenses, and travel for international students.
@@ -194,13 +208,19 @@
                         <h2>Never Miss an Opportunity</h2>
                         <p>Get personalized scholarship alerts and application tips directly in your inbox</p>
                     </div>
-                    <form class="newsletter-form">
+                    <form class="newsletter-form" action="#" method="POST">
                         <div class="form-group">
-                            <input type="email" placeholder="Enter your email address" required>
-                            <button type="submit" class="btn btn-primary">Subscribe Now</button>
+                            <input type="email" 
+                                   placeholder="Enter your email address" 
+                                   required
+                                   aria-label="Email address">
+                            <button type="submit" class="btn btn-primary">
+                                Subscribe Now
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                            </button>
                         </div>
                         <div class="form-note">
-                            <i class="fas fa-shield-alt"></i>
+                            <i class="fas fa-shield-alt" aria-hidden="true"></i>
                             We respect your privacy. Unsubscribe at any time.
                         </div>
                     </form>
