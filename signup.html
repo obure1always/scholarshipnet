@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - ScholarshipNet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">ScholarshipNet</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="scholarships.html">Scholarships</a>
+                <a href="resources.html">Resources</a>
+                <a href="login.html">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Signup Section -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-grid">
+                    <div class="auth-image">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Students studying">
+                        <div class="auth-image-overlay">
+                            <div class="auth-image-text">
+                                <h2>Join Our Community</h2>
+                                <p>Connect with thousands of scholarship opportunities and take the first step towards your academic dreams.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="auth-form">
+                        <h2>Create Your Account</h2>
+                        <p>Join our community of scholarship seekers</p>
+                        <form class="form" id="signupForm">
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" name="password" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm Password</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="educationLevel">Current Education Level</label>
+                                <select id="educationLevel" name="educationLevel" required>
+                                    <option value="">Select education level</option>
+                                    <option value="high-school">High School</option>
+                                    <option value="undergraduate">Undergraduate</option>
+                                    <option value="graduate">Graduate</option>
+                                    <option value="phd">PhD</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="fieldOfStudy">Field of Study</label>
+                                <input type="text" id="fieldOfStudy" name="fieldOfStudy" placeholder="e.g., Computer Science, Business" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group half">
+                                    <label for="gpa">Current GPA (optional)</label>
+                                    <input type="number" id="gpa" name="gpa" step="0.01" min="0" max="4.0" placeholder="e.g., 3.8">
+                                </div>
+                                <div class="form-group half">
+                                    <label for="graduationYear">Expected Graduation Year</label>
+                                    <input type="number" id="graduationYear" name="graduationYear" min="2024" max="2030" required>
+                                </div>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="terms" name="terms" required>
+                                    <span class="checkmark"></span>
+                                    I agree to the <a href="#" class="link">Terms of Service</a> and <a href="#" class="link">Privacy Policy</a>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Create Account</button>
+                        </form>
+                        <div class="auth-switch">
+                            Already have an account? <a href="login.html">Login here</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html> 

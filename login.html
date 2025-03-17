@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ScholarshipNet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">ScholarshipNet</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="signup.html">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Section -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-image">
+                    <img src="https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Student studying">
+                </div>
+                <div class="auth-form">
+                    <h2>Welcome Back</h2>
+                    <p>Access your scholarship dashboard</p>
+                    <form id="loginForm" class="form">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" required>
+                        </div>
+                        <div class="form-group remember-forgot">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="remember">
+                                <span class="checkmark"></span>
+                                Remember me
+                            </label>
+                            <a href="#" class="forgot-password">Forgot Password?</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login to Dashboard</button>
+                    </form>
+                    <div class="auth-features">
+                        <h3>What you'll get access to:</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Personalized scholarship matches</li>
+                            <li><i class="fas fa-check"></i> Application tracking</li>
+                            <li><i class="fas fa-check"></i> Deadline reminders</li>
+                            <li><i class="fas fa-check"></i> Scholarship resources</li>
+                        </ul>
+                    </div>
+                    <p class="auth-switch">Don't have an account? <a href="signup.html">Sign up here</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html> 
