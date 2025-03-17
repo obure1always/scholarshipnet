@@ -3,28 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpportunityNet - Your Gateway to Global Education</title>
+    <title>ScholarshipNet - Find Your Perfect Scholarship</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="OpportunityNet Logo" class="logo-img" width="40" height="40">
-                <div class="logo-text">OpportunityNet</div>
-            </a>
+        <div class="nav-container">
+            <a href="#" class="nav-logo">ScholarshipNet</a>
             <div class="nav-center">
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="scholarships.html" class="nav-link">Scholarships</a>
-                <a href="resources.html" class="nav-link">Resources</a>
+                <a href="#" class="nav-link">Home</a>
+                <a href="#scholarships" class="nav-link">Scholarships</a>
                 <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </div>
             <div class="nav-right">
-                <a href="login.html" class="btn btn-ghost">Login</a>
-                <a href="signup.html" class="btn btn-primary">Register</a>
+                <a href="#" class="btn btn-primary">Sign In</a>
+                <a href="#" class="btn btn-ghost">Get Started</a>
             </div>
             <button class="mobile-menu-btn" aria-label="Toggle menu">
                 <i class="fas fa-bars"></i>
@@ -34,68 +31,34 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-bg-pattern"></div>
-        <div class="container hero-container">
+        <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">
-                    Discover Your Path to
-                    <span class="gradient-text">Global Education</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Access thousands of scholarships worldwide and turn your educational dreams into reality
-                </p>
+                <h1>Find Your Perfect Scholarship</h1>
+                <p>Discover thousands of scholarships worldwide and take the first step towards your educational dreams.</p>
                 <div class="search-container">
-                    <div class="search-box">
-                        <i class="fas fa-search"></i>
-                        <input type="text" placeholder="Search scholarships by country, university, or field..." aria-label="Search scholarships">
-                        <button class="btn btn-primary btn-search" aria-label="Search">
-                            <i class="fas fa-search"></i>
-                            Search
+                    <form class="search-form">
+                        <input type="text" class="search-input" placeholder="Search scholarships by keyword, location, or field of study">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-search"></i> Search
                         </button>
-                    </div>
-                    <div class="popular-searches">
-                        Popular: <a href="#">Full Scholarship</a> • <a href="#">Masters Degree</a> • <a href="#">PhD Positions</a>
-                    </div>
+                    </form>
                 </div>
-                <div class="grid stats-grid">
-                    <div class="card stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
-                        </div>
-                        <div class="stat-content">
-                            <div class="stat-number">15,000+</div>
-                            <div class="stat-label">Active Scholarships</div>
-                        </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">Available Scholarships</div>
                     </div>
-                    <div class="card stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-globe" aria-hidden="true"></i>
-                        </div>
-                        <div class="stat-content">
-                            <div class="stat-number">100+</div>
-                            <div class="stat-label">Countries</div>
-                        </div>
+                    <div class="stat-card">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Countries</div>
                     </div>
-                    <div class="card stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-users" aria-hidden="true"></i>
-                        </div>
-                        <div class="stat-content">
-                            <div class="stat-number">50,000+</div>
-                            <div class="stat-label">Success Stories</div>
-                        </div>
+                    <div class="stat-card">
+                        <div class="stat-number">1M+</div>
+                        <div class="stat-label">Students Helped</div>
                     </div>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="assets/hero-image.jpg" alt="Students studying together" width="800" height="600" loading="lazy">
-                <div class="card floating-card">
-                    <div class="card-icon">
-                        <i class="fas fa-award" aria-hidden="true"></i>
-                    </div>
-                    <div class="card-content">
-                        <h3>New Scholarship Alert</h3>
-                        <p>Fulbright Scholarship 2025</p>
+                    <div class="stat-card">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Success Rate</div>
                     </div>
                 </div>
             </div>
@@ -103,98 +66,46 @@
     </section>
 
     <!-- Featured Scholarships -->
-    <section class="featured-scholarships">
+    <section id="scholarships" class="section">
         <div class="container">
             <div class="section-header">
-                <div class="header-left">
-                    <h2>Featured Opportunities</h2>
-                    <p>Exclusive scholarships with upcoming deadlines</p>
-                </div>
-                <a href="scholarships.html" class="btn btn-outline">
-                    View All
-                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                </a>
+                <h2>Featured Scholarships</h2>
+                <p>Explore our handpicked selection of the best scholarships available right now.</p>
             </div>
-            <div class="grid scholarship-grid">
-                <article class="scholarship-card">
-                    <div class="card-tag">Featured</div>
-                    <div class="card-header">
-                        <img src="assets/scholarships/australia.jpg" 
-                             alt="University of Melbourne campus" 
-                             class="thumbnail"
-                             width="400" 
-                             height="200"
-                             loading="lazy">
-                        <div class="card-overlay">
-                            <span class="deadline">30 Days Left</span>
-                            <div class="country">
-                                <img src="assets/flags/au.svg" alt="Australia flag" width="20" height="15">
-                                Australia
-                            </div>
+            <div class="scholarship-grid">
+                <div class="scholarship-card">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="University of Cambridge" class="scholarship-image">
+                    <div class="scholarship-content">
+                        <h3>University of Cambridge Scholarship</h3>
+                        <p>Full tuition coverage for international students pursuing undergraduate studies.</p>
+                        <div class="scholarship-meta">
+                            <span><i class="fas fa-calendar"></i> Deadline: Dec 31, 2024</span>
+                            <span><i class="fas fa-map-marker-alt"></i> UK</span>
                         </div>
                     </div>
-                    <div class="card-body">
-                        <h3>Australia Awards Scholarships 2026</h3>
-                        <div class="card-meta">
-                            <span><i class="fas fa-graduation-cap" aria-hidden="true"></i> Masters, PhD</span>
-                            <span><i class="fas fa-wallet" aria-hidden="true"></i> Full Funding</span>
-                        </div>
-                        <p class="card-description">
-                            Full scholarship covering tuition, living expenses, and travel for international students.
-                        </p>
-                        <a href="#" class="btn btn-primary btn-apply">Apply Now</a>
-                    </div>
-                </article>
-
-                <article class="scholarship-card">
-                    <div class="card-tag">Popular</div>
-                    <div class="card-header">
-                        <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Erasmus Mundus">
-                        <div class="card-overlay">
-                            <span class="deadline">45 Days Left</span>
-                            <div class="country">
-                                <img src="https://flagcdn.com/w40/eu.png" alt="European Union" class="country-flag">
-                                European Union
-                            </div>
+                </div>
+                <div class="scholarship-card">
+                    <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Stanford University" class="scholarship-image">
+                    <div class="scholarship-content">
+                        <h3>Stanford University Fellowship</h3>
+                        <p>Research fellowship for graduate students in computer science and engineering.</p>
+                        <div class="scholarship-meta">
+                            <span><i class="fas fa-calendar"></i> Deadline: Jan 15, 2025</span>
+                            <span><i class="fas fa-map-marker-alt"></i> USA</span>
                         </div>
                     </div>
-                    <div class="card-body">
-                        <h3>Erasmus Mundus Scholarship 2025</h3>
-                        <div class="card-meta">
-                            <span><i class="fas fa-graduation-cap"></i> Masters</span>
-                            <span><i class="fas fa-wallet"></i> €24,000/year</span>
-                        </div>
-                        <p class="card-description">
-                            Study in multiple European countries with full financial support.
-                        </p>
-                        <a href="#" class="btn btn-apply">Apply Now</a>
-                    </div>
-                </article>
-
-                <article class="scholarship-card">
-                    <div class="card-tag">New</div>
-                    <div class="card-header">
-                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Chevening">
-                        <div class="card-overlay">
-                            <span class="deadline">60 Days Left</span>
-                            <div class="country">
-                                <img src="https://flagcdn.com/w40/gb.png" alt="United Kingdom" class="country-flag">
-                                United Kingdom
-                            </div>
+                </div>
+                <div class="scholarship-card">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="MIT" class="scholarship-image">
+                    <div class="scholarship-content">
+                        <h3>MIT Research Grant</h3>
+                        <p>Funding for innovative research projects in science and technology.</p>
+                        <div class="scholarship-meta">
+                            <span><i class="fas fa-calendar"></i> Deadline: Feb 1, 2025</span>
+                            <span><i class="fas fa-map-marker-alt"></i> USA</span>
                         </div>
                     </div>
-                    <div class="card-body">
-                        <h3>Chevening Scholarships 2026</h3>
-                        <div class="card-meta">
-                            <span><i class="fas fa-graduation-cap"></i> Masters</span>
-                            <span><i class="fas fa-wallet"></i> Full Funding</span>
-                        </div>
-                        <p class="card-description">
-                            UK government's global scholarship programme for future leaders.
-                        </p>
-                        <a href="#" class="btn btn-apply">Apply Now</a>
-                    </div>
-                </article>
+                </div>
             </div>
         </div>
     </section>
@@ -202,32 +113,58 @@
     <!-- Newsletter Section -->
     <section class="newsletter">
         <div class="container">
-            <div class="card newsletter-card">
-                <div class="newsletter-content">
-                    <div class="newsletter-text">
-                        <h2>Never Miss an Opportunity</h2>
-                        <p>Get personalized scholarship alerts and application tips directly in your inbox</p>
-                    </div>
-                    <form class="newsletter-form" action="#" method="POST">
-                        <div class="form-group">
-                            <input type="email" 
-                                   placeholder="Enter your email address" 
-                                   required
-                                   aria-label="Email address">
-                            <button type="submit" class="btn btn-primary">
-                                Subscribe Now
-                                <i class="fas fa-paper-plane" aria-hidden="true"></i>
-                            </button>
-                        </div>
-                        <div class="form-note">
-                            <i class="fas fa-shield-alt" aria-hidden="true"></i>
-                            We respect your privacy. Unsubscribe at any time.
-                        </div>
-                    </form>
-                </div>
+            <div class="newsletter-content">
+                <h2>Stay Updated with New Scholarships</h2>
+                <p>Subscribe to our newsletter and never miss out on new opportunities.</p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email address">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About ScholarshipNet</h3>
+                    <p>ScholarshipNet is your trusted platform for finding the perfect scholarship opportunities worldwide. We connect students with educational funding to help them achieve their academic dreams.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Scholarships</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">Application Guide</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ScholarshipNet. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
