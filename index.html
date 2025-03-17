@@ -13,7 +13,7 @@
     <nav class="navbar">
         <div class="container nav-container">
             <div class="logo">
-                <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&h=50&q=80" alt="Logo" class="logo-img">
+                <img src="assets/logo.png" alt="Logo" class="logo-img" width="40" height="40">
                 <div class="logo-text">OpportunityNet</div>
             </div>
             <div class="nav-center">
@@ -26,7 +26,7 @@
                 <a href="login.html" class="btn btn-ghost">Login</a>
                 <a href="signup.html" class="btn btn-primary">Register</a>
             </div>
-            <button class="mobile-menu-btn">
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -44,34 +44,32 @@
                 <p class="hero-subtitle">
                     Access thousands of scholarships worldwide and turn your educational dreams into reality
                 </p>
-                <div class="hero-cta">
-                    <div class="search-container">
-                        <div class="search-box">
-                            <i class="fas fa-search"></i>
-                            <input type="text" placeholder="Search scholarships by country, university, or field...">
-                            <button class="btn-search">Search</button>
-                        </div>
-                        <div class="popular-searches">
-                            Popular: <a href="#">Full Scholarship</a> • <a href="#">Masters Degree</a> • <a href="#">PhD Positions</a>
-                        </div>
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search scholarships by country, university, or field...">
+                        <button class="btn btn-primary btn-search">Search</button>
+                    </div>
+                    <div class="popular-searches">
+                        Popular: <a href="#">Full Scholarship</a> • <a href="#">Masters Degree</a> • <a href="#">PhD Positions</a>
                     </div>
                 </div>
-                <div class="hero-stats">
-                    <div class="stat-card">
+                <div class="grid stats-grid">
+                    <div class="card stat-card">
                         <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
                         <div class="stat-content">
                             <div class="stat-number">15,000+</div>
                             <div class="stat-label">Active Scholarships</div>
                         </div>
                     </div>
-                    <div class="stat-card">
+                    <div class="card stat-card">
                         <div class="stat-icon"><i class="fas fa-globe"></i></div>
                         <div class="stat-content">
                             <div class="stat-number">100+</div>
                             <div class="stat-label">Countries</div>
                         </div>
                     </div>
-                    <div class="stat-card">
+                    <div class="card stat-card">
                         <div class="stat-icon"><i class="fas fa-users"></i></div>
                         <div class="stat-content">
                             <div class="stat-number">50,000+</div>
@@ -81,19 +79,12 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Students">
-                <div class="floating-card scholarship-card">
+                <img src="assets/hero-image.jpg" alt="Students studying" width="800" height="600" loading="lazy">
+                <div class="card floating-card">
                     <div class="card-icon"><i class="fas fa-award"></i></div>
                     <div class="card-content">
                         <h3>New Scholarship Alert</h3>
                         <p>Fulbright Scholarship 2025</p>
-                    </div>
-                </div>
-                <div class="floating-card success-card">
-                    <div class="card-icon"><i class="fas fa-check-circle"></i></div>
-                    <div class="card-content">
-                        <h3>Success Rate</h3>
-                        <p>89% Application Success</p>
                     </div>
                 </div>
             </div>
@@ -108,19 +99,22 @@
                     <h2>Featured Opportunities</h2>
                     <p>Exclusive scholarships with upcoming deadlines</p>
                 </div>
-                <div class="header-right">
-                    <a href="scholarships.html" class="btn btn-outline">View All Scholarships <i class="fas fa-arrow-right"></i></a>
-                </div>
+                <a href="scholarships.html" class="btn btn-outline">View All <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="scholarship-grid">
-                <div class="scholarship-card premium">
+            <div class="grid scholarship-grid">
+                <article class="scholarship-card">
                     <div class="card-tag">Featured</div>
                     <div class="card-header">
-                        <img src="https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Australia Awards">
+                        <img src="assets/scholarships/australia.jpg" 
+                             alt="Australia Awards" 
+                             class="thumbnail"
+                             width="400" 
+                             height="200"
+                             loading="lazy">
                         <div class="card-overlay">
                             <span class="deadline">30 Days Left</span>
                             <div class="country">
-                                <img src="https://flagcdn.com/w40/au.png" alt="Australia" class="country-flag">
+                                <img src="assets/flags/au.svg" alt="Australia flag" width="20" height="15">
                                 Australia
                             </div>
                         </div>
@@ -134,11 +128,11 @@
                         <p class="card-description">
                             Full scholarship covering tuition, living expenses, and travel for international students.
                         </p>
-                        <a href="#" class="btn btn-apply">Apply Now</a>
+                        <a href="#" class="btn btn-primary btn-apply">Apply Now</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="scholarship-card">
+                <article class="scholarship-card">
                     <div class="card-tag">Popular</div>
                     <div class="card-header">
                         <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Erasmus Mundus">
@@ -161,9 +155,9 @@
                         </p>
                         <a href="#" class="btn btn-apply">Apply Now</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="scholarship-card">
+                <article class="scholarship-card">
                     <div class="card-tag">New</div>
                     <div class="card-header">
                         <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Chevening">
@@ -186,7 +180,7 @@
                         </p>
                         <a href="#" class="btn btn-apply">Apply Now</a>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
@@ -194,20 +188,22 @@
     <!-- Newsletter Section -->
     <section class="newsletter">
         <div class="container">
-            <div class="newsletter-content">
-                <div class="newsletter-text">
-                    <h2>Never Miss an Opportunity</h2>
-                    <p>Get personalized scholarship alerts and application tips directly in your inbox</p>
-                </div>
-                <div class="newsletter-form">
-                    <div class="form-group">
-                        <input type="email" placeholder="Enter your email address">
-                        <button class="btn btn-primary">Subscribe Now</button>
+            <div class="card newsletter-card">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h2>Never Miss an Opportunity</h2>
+                        <p>Get personalized scholarship alerts and application tips directly in your inbox</p>
                     </div>
-                    <div class="form-note">
-                        <i class="fas fa-shield-alt"></i>
-                        We respect your privacy. Unsubscribe at any time.
-                    </div>
+                    <form class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="Enter your email address" required>
+                            <button type="submit" class="btn btn-primary">Subscribe Now</button>
+                        </div>
+                        <div class="form-note">
+                            <i class="fas fa-shield-alt"></i>
+                            We respect your privacy. Unsubscribe at any time.
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

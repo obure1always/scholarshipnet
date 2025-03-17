@@ -19,15 +19,24 @@
     --border-color: #e5e7eb;
     --background-light: #f9fafb;
     --background-dark: #1f2937;
+    --card-background: #ffffff;
     --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
     --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
     --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
     --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     --gradient-dark: linear-gradient(135deg, var(--background-dark), var(--primary-dark));
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --border-radius: 12px;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
 body {
-    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
     background-color: var(--background-light);
@@ -36,7 +45,7 @@ body {
 .container {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 var(--spacing-md);
 }
 
 /* Navigation */
@@ -124,13 +133,13 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 20px;
-    border-radius: 8px;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius);
     font-weight: 500;
-    font-size: 15px;
+    font-size: 0.875rem;
     transition: all 0.3s ease;
     text-decoration: none;
-    gap: 8px;
+    gap: var(--spacing-xs);
 }
 
 .btn-primary {
@@ -140,7 +149,7 @@ body {
 }
 
 .btn-primary:hover {
-    transform: translateY(-1px);
+    transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
 
@@ -439,16 +448,15 @@ body {
 }
 
 .scholarship-card {
-    background: white;
-    border-radius: 20px;
+    background: var(--card-background);
+    border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--shadow-md);
-    transition: all 0.3s ease;
-    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .scholarship-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
 }
 
@@ -473,11 +481,6 @@ body {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.scholarship-card:hover .card-header img {
-    transform: scale(1.05);
 }
 
 .card-overlay {
@@ -515,35 +518,30 @@ body {
 }
 
 .card-body {
-    padding: 24px;
+    padding: var(--spacing-md);
 }
 
 .card-body h3 {
-    font-size: 18px;
+    font-size: 1.25rem;
     font-weight: 600;
     color: var(--text-dark);
-    margin-bottom: 12px;
+    margin-bottom: var(--spacing-sm);
     line-height: 1.4;
 }
 
 .card-meta {
     display: flex;
-    gap: 16px;
-    margin-bottom: 16px;
-}
-
-.card-meta span {
-    display: flex;
     align-items: center;
-    gap: 6px;
-    font-size: 14px;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
     color: var(--text-medium);
+    font-size: 0.875rem;
 }
 
 .card-description {
-    font-size: 14px;
+    font-size: 0.875rem;
     color: var(--text-medium);
-    margin-bottom: 24px;
+    margin-bottom: var(--spacing-md);
     line-height: 1.6;
 }
 
@@ -676,6 +674,19 @@ body {
     .form-group {
         flex-direction: column;
     }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--spacing-md);
+    }
+    
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.5rem; }
 }
 
 @media (max-width: 480px) {
@@ -692,4 +703,16 @@ body {
         text-align: center;
         gap: 16px;
     }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .card-header img {
+        height: 180px;
+    }
+    
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.25rem; }
 } 
