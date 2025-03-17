@@ -5,119 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ScholarshipNet - Find Your Perfect Scholarship</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">ScholarshipNet</a>
+            <a href="/" class="nav-logo">ScholarshipNet</a>
+            
             <div class="nav-center">
-                <a href="#" class="nav-link">Home</a>
+                <a href="#home" class="nav-link">Home</a>
                 <a href="#scholarships" class="nav-link">Scholarships</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
+
             <div class="nav-right">
-                <a href="#" class="btn btn-primary">Sign In</a>
-                <a href="#" class="btn btn-ghost">Get Started</a>
+                <a href="/signin" class="btn btn-secondary">Sign In</a>
+                <a href="/signup" class="btn btn-primary">Get Started</a>
             </div>
+
             <button class="mobile-menu-btn" aria-label="Toggle menu">
-                <i class="fas fa-bars"></i>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
             </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Find Your Perfect Scholarship</h1>
-                <p>Discover thousands of scholarships worldwide and take the first step towards your educational dreams.</p>
-                <div class="search-container">
-                    <form class="search-form">
-                        <input type="text" class="search-input" placeholder="Search scholarships by keyword, location, or field of study">
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-search"></i> Search
-                        </button>
-                    </form>
-                </div>
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-number">10K+</div>
-                        <div class="stat-label">Available Scholarships</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label">Countries</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">1M+</div>
-                        <div class="stat-label">Students Helped</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">95%</div>
-                        <div class="stat-label">Success Rate</div>
-                    </div>
-                </div>
+        <div class="hero-content">
+            <h1>Find Your Perfect Scholarship</h1>
+            <p>Discover thousands of scholarships and educational opportunities tailored just for you.</p>
+            <div class="flex-center">
+                <a href="#search" class="btn btn-primary">Start Your Search</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>10,000+</h3>
+                <p>Active Scholarships</p>
+            </div>
+            <div class="stat-card">
+                <h3>$50M+</h3>
+                <p>Scholarship Value</p>
+            </div>
+            <div class="stat-card">
+                <h3>50,000+</h3>
+                <p>Students Helped</p>
             </div>
         </div>
     </section>
 
     <!-- Featured Scholarships -->
-    <section id="scholarships" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Featured Scholarships</h2>
-                <p>Explore our handpicked selection of the best scholarships available right now.</p>
+    <section class="scholarships container">
+        <h2 class="text-center">Featured Scholarships</h2>
+        <div class="scholarship-grid">
+            <div class="scholarship-card">
+                <div class="scholarship-content">
+                    <h3>Academic Excellence Scholarship</h3>
+                    <p>For outstanding academic achievements</p>
+                    <div class="scholarship-meta">
+                        <span>$25,000</span>
+                        <span>Deadline: Aug 30, 2024</span>
+                    </div>
+                    <a href="#" class="btn btn-primary w-full">Apply Now</a>
+                </div>
             </div>
-            <div class="scholarship-grid">
-                <div class="scholarship-card">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="University of Cambridge" class="scholarship-image">
-                    <div class="scholarship-content">
-                        <h3>University of Cambridge Scholarship</h3>
-                        <p>Full tuition coverage for international students pursuing undergraduate studies.</p>
-                        <div class="scholarship-meta">
-                            <span><i class="fas fa-calendar"></i> Deadline: Dec 31, 2024</span>
-                            <span><i class="fas fa-map-marker-alt"></i> UK</span>
-                        </div>
+            <div class="scholarship-card">
+                <div class="scholarship-content">
+                    <h3>STEM Innovation Grant</h3>
+                    <p>Supporting future scientists and engineers</p>
+                    <div class="scholarship-meta">
+                        <span>$15,000</span>
+                        <span>Deadline: Sept 15, 2024</span>
                     </div>
+                    <a href="#" class="btn btn-primary w-full">Apply Now</a>
                 </div>
-                <div class="scholarship-card">
-                    <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Stanford University" class="scholarship-image">
-                    <div class="scholarship-content">
-                        <h3>Stanford University Fellowship</h3>
-                        <p>Research fellowship for graduate students in computer science and engineering.</p>
-                        <div class="scholarship-meta">
-                            <span><i class="fas fa-calendar"></i> Deadline: Jan 15, 2025</span>
-                            <span><i class="fas fa-map-marker-alt"></i> USA</span>
-                        </div>
+            </div>
+            <div class="scholarship-card">
+                <div class="scholarship-content">
+                    <h3>Global Leadership Award</h3>
+                    <p>For emerging global leaders</p>
+                    <div class="scholarship-meta">
+                        <span>$20,000</span>
+                        <span>Deadline: Oct 1, 2024</span>
                     </div>
-                </div>
-                <div class="scholarship-card">
-                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="MIT" class="scholarship-image">
-                    <div class="scholarship-content">
-                        <h3>MIT Research Grant</h3>
-                        <p>Funding for innovative research projects in science and technology.</p>
-                        <div class="scholarship-meta">
-                            <span><i class="fas fa-calendar"></i> Deadline: Feb 1, 2025</span>
-                            <span><i class="fas fa-map-marker-alt"></i> USA</span>
-                        </div>
-                    </div>
+                    <a href="#" class="btn btn-primary w-full">Apply Now</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Newsletter Section -->
+    <!-- Newsletter -->
     <section class="newsletter">
         <div class="container">
             <div class="newsletter-content">
-                <h2>Stay Updated with New Scholarships</h2>
-                <p>Subscribe to our newsletter and never miss out on new opportunities.</p>
+                <h2>Stay Updated</h2>
+                <p>Get the latest scholarships delivered to your inbox</p>
                 <form class="newsletter-form">
-                    <input type="email" class="newsletter-input" placeholder="Enter your email address">
+                    <input type="email" placeholder="Enter your email" required>
                     <button type="submit" class="btn btn-primary">Subscribe</button>
                 </form>
             </div>
@@ -126,43 +120,39 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>About ScholarshipNet</h3>
-                    <p>ScholarshipNet is your trusted platform for finding the perfect scholarship opportunities worldwide. We connect students with educational funding to help them achieve their academic dreams.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Scholarships</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Success Stories</a></li>
-                        <li><a href="#">Application Guide</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Connect With Us</h3>
-                    <ul class="footer-links">
-                        <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-                        <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
-                    </ul>
-                </div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ScholarshipNet</h3>
+                <p>Connecting students with educational opportunities worldwide. Your future starts here.</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 ScholarshipNet. All rights reserved.</p>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#scholarships">Scholarships</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="#guide">Application Guide</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#support">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto:info@scholarshipnet.com">info@scholarshipnet.com</a></li>
+                    <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ScholarshipNet. All rights reserved.</p>
         </div>
     </footer>
 
